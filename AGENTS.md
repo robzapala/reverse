@@ -102,6 +102,24 @@ Development requires Node.js 24.18.0 and npm 11.16.0 (`.nvmrc` and `packageManag
 
 Use Conventional Commit subjects because Release Please derives versions and changelogs from them. Examples: `feat: add historical source import`, `fix(process): stop timers after exit`, and `docs: update architecture`. Use `!` or a `BREAKING CHANGE:` footer for breaking changes. Pull request titles must follow the same format because squash merges use the title as the release commit. Pull requests should describe contract or behavior changes, list verification commands, link issues, and include sanitized MCP examples when schemas change. State whether real Hopper/Ghidra verification was performed. Never commit binaries, Hopper or Ghidra project documents, credentials, `dist/`, `node_modules/`, or local planning artifacts (e.g. `.codex/`).
 
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live in GitHub Issues for `robzapala/reverse`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default vocabulary: `bug`, `enhancement`, `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: one root `GLOSSARY.md` (created lazily) and ADRs in `docs/adr/`. See `docs/agents/domain.md`.
+
+### External peers
+
+`auto`: picks the Claude or Codex tool based on the current host, with each tool's default model and high effort. See `docs/agents/cross-model.json`.
+
 <!-- BEGIN:turborepo-agent-rules -->
 
 # This is NOT the Turborepo you know
